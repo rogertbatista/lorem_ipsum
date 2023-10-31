@@ -12,6 +12,7 @@ const text = [
 const form = document.querySelector('.lorem-form');
 const amount = document.getElementById('amount');
 const result = document.querySelector('.lorem-text');
+const cleanBtn = document.getElementById('btn-clean');
 
 form.addEventListener('submit',function(e){
     e.preventDefault();
@@ -28,4 +29,8 @@ form.addEventListener('submit',function(e){
         }).join('');
         result.innerHTML = tempText;
     }
+});
+
+cleanBtn.addEventListener('click',function(){
+    result.innerHTML = '';
 });
